@@ -13,7 +13,7 @@ function Home(props) {
   const { classes } = props;
   return (
     <>
-      <Jumbo />
+     
     </>
   );
 };

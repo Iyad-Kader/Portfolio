@@ -9,20 +9,37 @@ import Projects from './components/Projects';
 import './App.css';
 import { grey } from '@material-ui/core/colors';
 import color from '@material-ui/core/colors/brown';
+import Background from './assets/whiteSoftBackground.jpg';
+
+
+const styles = {
+  background: {
+  minWidth: "1024px",
+  minHeight: "100%",
+  backgroundImage: `url(${Background})`,
+  backgroundRepeat: 'no-repeat',
+  backgroudSize: '1000px 500px'
+  }
+}
+
 
 class App extends Component {
   render() {
     return (
-      <>
+      <div>
+        <img src={Background} alt=""/>
+      
+      
       <Router>
-          <div>
+       
       <Navbar />
       <Route exact path='/' component={Home} />
       <Route path='/project' component={Projects} />
       <Route path='/contact' component={Contact} />
-      </div>
       </Router>
-      </>
+         
+      
+      </div>
     );
   }
 }
