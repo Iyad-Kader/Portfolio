@@ -11,14 +11,14 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
   card: {
-    maxWidth: 345,
+    maxWidth: 345
   },
   media: {
-    height: 140,
-  },
+    height: 140
+  }
 };
 
-function VetCard(props) {
+function VetCard (props) {
   const { classes } = props;
   return (
     <Card className={classes.card}>
@@ -28,17 +28,20 @@ function VetCard(props) {
           image={require('./VetCardPic.png')}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant='h5' component='h2'>
             SORIN Vet Clinic
           </Typography>
-          <Typography component="p">
-            SORIN is used for Veterinary clinics to set appointments, gain information on patients and docotrs, and to calculate dosage of medicine needed for cats and dogs based off weight and species.
+          <Typography component='p'>
+            SORIN is used for Veterinary clinics to set appointments, gain information on patient's and doctor's, and to calculate dosage of medicine needed for cat's and dog's based off weight and species. View the deployed version and login with username: <strong>admin</strong>; password: <strong>admin</strong>
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          <a href="https://github.com/Iyad-Kader/VetClicnic" target="_blank">View project on Github</a>
+        <Button size='small' color='primary'>
+          <a href='https://github.com/Iyad-Kader/VetClicnic' target='_blank'>View Github</a>
+        </Button>
+        <Button size='small' color='primary'>
+          <a href='https://young-taiga-86041.herokuapp.com/' target='_blank'>View Deployed</a>
         </Button>
       </CardActions>
     </Card>
@@ -46,7 +49,7 @@ function VetCard(props) {
 }
 
 VetCard.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(VetCard);

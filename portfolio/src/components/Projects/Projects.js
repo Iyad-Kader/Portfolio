@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import VetCard from "./components/VetCard";
+import VetCard from './components/VetCard';
 import SneakCard from './components/SneakCard/SneakCard';
-
+import Home from '../Home/Home';
+import Jumbo from '../Jumbotron/Jumbotron';
 const styles = {
 
   layout: {
@@ -13,20 +14,18 @@ const styles = {
 };
 
 class Projects extends Component {
-  render() {
+  render () {
     return (
-      <div style={styles.layout}>
-        <VetCard />
-        <SneakCard />
-      </div>
-    )
+      <>
+        <Jumbo />
+        <div style={styles.layout}>
+          <VetCard />
+          <SneakCard />
+        </div>
+
+      </>
+    );
   }
 }
 
-export default Projects
-
-
-
-
-
-
+export default Projects;

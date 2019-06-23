@@ -12,14 +12,17 @@ import Typography from '@material-ui/core/Typography';
 const styles = {
   card: {
     maxWidth: 345,
-    maxHeight: 400
+    maxHeight: 424
   },
   media: {
-    height: 140,
+    height: 140
   },
+  btn: {
+    marginTop: '2.8rem'
+  }
 };
 
-function SneakCard(props) {
+function SneakCard (props) {
   const { classes } = props;
   return (
     <Card className={classes.card}>
@@ -29,17 +32,17 @@ function SneakCard(props) {
           image={require('./SneakCard.png')}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant='h5' component='h2'>
             SneakPeek
           </Typography>
-          <Typography component="p">
+          <Typography component='p'>
             An Ecommerce website to buy and pre-order top of the line sneakers. Contains cart checkout with dummy credit card using stripe. Allowing login and account saved data.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          <a href="https://github.com/Iyad-Kader/SneakPeek" target="_blank">View project on Github</a>
+        <Button style={styles.btn} size='small' color='primary'>
+          <a href='https://github.com/Iyad-Kader/SneakPeek' target='_blank'>View Github</a>
         </Button>
       </CardActions>
     </Card>
@@ -47,7 +50,7 @@ function SneakCard(props) {
 }
 
 SneakCard.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(SneakCard);
