@@ -1,10 +1,34 @@
 import React, { Component } from 'react';
 import VetCard from './components/VetCard';
 import SneakCard from './components/SneakCard/SneakCard';
-import Home from '../Home/Home';
-import Jumbo from '../Jumbotron/Jumbotron';
-const styles = {
+import { Jumbotron, Button } from 'reactstrap';
 
+const styles = {
+  h1: {
+    marginLeft: '5rem',
+    fontSize: '20px',
+    fontFamily: 'Open Sans',
+    fontWeight: 'normal',
+    paddingTop: '5rem'
+  },
+  h4: {
+    fontSize: '15px',
+    fontFamily: 'Open Sans',
+    fontWeight: 'normal',
+    marginTop: '-1rem',
+    marginLeft: '6rem'
+  },
+  font: {
+    fontSize: '17px',
+    fontFamily: 'Open Sans',
+    fontWeight: 'normal',
+    marginLeft: '7rem',
+    paddingTop: '2rem',
+    paddingBottom: '2rem'
+  },
+  background: {
+    backgroundColor: '#ffffff'
+  },
   layout: {
     display: 'flex',
     justifyContent: 'space-evenly',
@@ -17,7 +41,11 @@ class Projects extends Component {
   render () {
     return (
       <>
-        <Jumbo />
+        <Jumbotron style={styles.background}>
+          <h2 className='display-3' align='left' style={styles.h1}>Hi, Im Iyad Kader - a full stack developer who like's to solve problem's.</h2>
+          <h4 align='left' style={styles.h4}>(you can call me <strong>Eddie</strong>)</h4>
+          <p align='left' style={styles.font}>Take a look at my project's</p>
+        </Jumbotron>
         <div style={styles.layout}>
           <VetCard />
           <SneakCard />
