@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
-
-import ReactDOM from 'react-dom';
-import { SocialIcon } from 'react-social-icons';
+import axios from 'axios';
 
 const styles = {
   color: {
@@ -14,26 +12,73 @@ const styles = {
   font: {
     fontSize: '80px',
     marginTop: '1rem'
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
+    top: '10rem',
+    textAlign: 'center',
+    maxWidth: '15rem',
+    margin: 'auto',
+    padding: '1rem'
+  },
+  btn: {
+    margin: 'auto',
+    display: 'flex',
+    position: 'relative',
+    top: '10rem'
+
   }
 };
 
-export default class Contact extends React.Component {
+class Contact extends React.Component {
+  // resetForm = () => {
+  //   document.getElementById('contact-form').reset();
+  // }
+
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const name = document.getElementById('name').value;
+  //   const email = document.getElementById('email').value;
+  //   const message = document.getElementById('message').value;
+  //   axios({
+  //     method: 'POST',
+  //     url: 'http://localhost:3000/send',
+  //     data: {
+  //       name: name,
+  //       email: email,
+  //       messsage: message
+  //     }
+  //   }).then((response) => {
+  //     if (response.data.msg === 'success') {
+  //       alert('Message Sent.');
+  //       this.resetForm();
+  //     } else if (response.data.msg === 'fail') {
+  //       alert('Message failed to send.');
+  //     }
+  //   });
+  // }
+
   render () {
     return (
-      <>
-
-        <h2 align='center' styles={styles.font}>Find me on Linkedin below</h2>
-
-        <div align='center'>
-          <SocialIcon url='https://www.linkedin.com/in/iyad-eddie-k-6a8048103' target='_blank' />
+      <form id='contact-form' onSubmit={this.handleSubmit.bind(this)} method='POST'>
+        <div style={styles.form}className='form-group'>
+          <label for='name'>Name</label>
+          <input type='text' className='form-control' id='name' />
         </div>
-
-        <h2 align='center' >Or reach out to me through email
-
-          <h5>><a href='#' id='emailTxt'onClick='return false;'>eddie.kader@gmail.com</a></h5>
-        </h2>
-
-      </>
+        <div style={styles.form}className='form-group'>
+          <label for='exampleInputEmail1'>Email address</label>
+          <input type='email' className='form-control' id='email' aria-describedby='emailHelp' />
+        </div>
+        <div style={styles.form}className='form-group'>
+          <label for='message'>Message</label>
+          <textarea className='form-control' rows='5' id='message' />
+        </div>
+        <button style={styles.btn}type='submit' className='btn btn-primary'>Submit</button>
+      </form>
     );
   }
 }
+
+export default Contact;
