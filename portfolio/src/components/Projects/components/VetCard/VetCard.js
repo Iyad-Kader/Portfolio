@@ -15,9 +15,6 @@ const styles = {
   },
   media: {
     height: 140
-  },
-  click: {
-    pointerEvents: 'none'
   }
 };
 
@@ -27,15 +24,14 @@ function VetCard (props) {
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
-          style={styles.click}
           className={classes.media}
           image={require('./VetCardPic.png')}
         />
-        <CardContent style={styles.click}>
+        <CardContent>
           <Typography gutterBottom variant='h5' component='h2'>
             SORIN Vet Clinic
           </Typography>
-          <Typography component='p' style={styles.click}>
+          <Typography component='p'>
             SORIN is used for Veterinary clinics to set appointments, gain information on patient's and doctor's, and to calculate dosage of medicine needed for cat's and dog's based off weight and species. View the deployed version and login with username: <strong>admin</strong>; password: <strong>admin</strong>
           </Typography>
         </CardContent>
