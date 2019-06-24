@@ -33,7 +33,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-evenly',
     padding: '30px',
-    margin: '0, auto'
+    margin: '0, auto',
+    backgroundColor: 'rgba(66, 6, 6, 0.781)'
   }
 };
 

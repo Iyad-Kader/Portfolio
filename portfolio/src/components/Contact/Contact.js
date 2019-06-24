@@ -1,39 +1,78 @@
-import React from 'react';
-import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
 
-import ReactDOM from 'react-dom';
-import { SocialIcon } from 'react-social-icons';
+import React, { Component } from 'react';
+import axios from 'axios';
 
 const styles = {
-  color: {
-    backgroundColor: '#1D56DB'
-  },
-  size: {
-    padding: '2rem'
-  },
-  font: {
-    fontSize: '80px',
-    marginTop: '1rem'
-  }
-};
-
-export default class Contact extends React.Component {
-  render () {
-    return (
-      <>
-
-        <h2 align='center' styles={styles.font}>Find me on Linkedin below</h2>
-
-        <div align='center'>
-          <SocialIcon url='https://www.linkedin.com/in/iyad-eddie-k-6a8048103' target='_blank' />
-        </div>
-
-        <h2 align='center' >Or reach out to me through email
-
-          <h5>><a href='#' id='emailTxt'onClick='return false;'>eddie.kader@gmail.com</a></h5>
-        </h2>
-
-      </>
-    );
-  }
+    form: {
+      display: 'flex',
+      flexDirection: 'column',
+      paddingTop: '10rem',
+      textAlign: 'center',
+      maxWidth: '15rem',
+      margin: 'auto'
+    }
 }
+
+formSubmit = (e) => {
+  e.preventDefault()
+
+  this.setState({
+      buttonText: '...sending'
+  })
+
+  let data = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+  }
+  
+  axios.post('API_URI', data)
+  .then( res => {
+      this.setState({ sent: true }, this.resetForm())
+  })
+  .catch( () => {
+    console.log('Message not sent')
+  })
+}
+
+resetForm = () => {
+  this.setState({
+      name: '',
+      message: '',
+      email: '',
+      buttonText: 'Message Sent'
+  })
+}
+
+class Contact extends Component {
+
+    state = {
+        name: '',
+        message: '',
+        email: '',
+        sent: false,
+        buttonText: 'Send Message'
+    }
+    
+
+    render() {
+        return(
+          <form style={styles.form} className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
+        
+          <label class="message-name" htmlFor="message-name">Your Name</label>
+          <input onChange={e => this.setState({ name: e.target.value})} name="name" class="message-name" type="text" placeholder="Your Name" value={this.state.name}/>
+        
+          <label class="message-email" htmlFor="message-email">Your Email</label>
+          <input onChange={(e) => this.setState({ email: e.target.value})} name="email" class="message-email" type="email" placeholder="your@email.com" required value={this.state.email} />
+        
+          <label class="message" htmlFor="message-input">Your Message</label>
+          <textarea onChange={e => this.setState({ message: e.target.value})} name="message" class="message-input" type="text" placeholder="Please write your message here" value={this.state.message} required/>
+          <div className="button--container">
+              <button type="submit" className="button button-primary">{ this.state.buttonText }</button>
+          </div>
+        </form>
+        );
+    }
+}
+
+export default Contact;
