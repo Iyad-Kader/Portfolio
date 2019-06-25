@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/api/form', (req, res) => {
-  nodemailer.createTestAccount((err, account) => {
     const htmlEmail = `
       <h3>Contact Details</h3>
       <ul>
@@ -48,7 +47,7 @@ app.post('/api/form', (req, res) => {
       console.log('Message URL: %s', nodemailer.getTestMessageUrl(info));
     });
   });
-})
+
 ;
 const PORT = process.env.PORT || 5000;
 
