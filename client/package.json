@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://iyadkader.tk",
+  "proxy": "http://iyadkader.tk/contact",
   "homepage": "http://iyadkader.tk",
   "dependencies": {
     "@material-ui/core": "^4.1.2",
