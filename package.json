@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://iyadkader.tk",
+  "homepage": "http://iyadkader.tk",
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
