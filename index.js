@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const favicon = require('express-favicon');
 const path = require('path');
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(favicon(__dirname + '/build/favicon.ico'));
 
 app.post('/api/form', (req, res) => {
     const htmlEmail = `
@@ -48,6 +50,12 @@ app.post('/api/form', (req, res) => {
     });
   });
 
+
+  const PORT = process.env.PORT || 5000
+
+  app.listen(PORT, () => {
+    console.log('Server listening on port ${PORT}')
+  })
   
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('/*', function (req, res) {

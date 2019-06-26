@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const styles = {
   font: {
-    fontSize: '10px',
+    fontSize: '15px',
     outline: 'none',
     color: '#8C001A',
     paddingTop: '1.5rem',
@@ -16,7 +16,8 @@ const styles = {
     backgroundColor: '#ffffff',
     width: '100%',
     top: '-1rem',
-    paddingTop: '1rem'
+    paddingTop: '1rem',
+    padding: '1rem'
   }
 };
 

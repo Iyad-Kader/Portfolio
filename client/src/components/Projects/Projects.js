@@ -3,6 +3,7 @@ import VetCard from './components/VetCard';
 import SneakCard from './components/SneakCard/SneakCard';
 import { Jumbotron, Button } from 'reactstrap';
 
+
 const styles = {
   h1: {
     marginLeft: '5rem',
@@ -42,7 +43,7 @@ class Projects extends Component {
   render () {
     return (
       <>
-        <Jumbotron style={styles.background}>
+        <Jumbotron id='jumb' style={styles.background}>
           <h2 className='display-3' align='left' style={styles.h1}>Hi, Im Iyad Kader - a full stack developer who like's to solve problem's.</h2>
           <h4 align='left' style={styles.h4}>(you can call me <strong>Eddie</strong>)</h4>
           <p align='left' style={styles.font}>Take a look at my project's</p>

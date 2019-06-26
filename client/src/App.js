@@ -7,6 +7,9 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import './App.css';
 
+
+
+
 class App extends Component {
   render () {
     return (
