@@ -57,7 +57,7 @@ app.post('/api/form', (req, res) => {
     console.log('Server listening on port ${PORT}')
   })
   
-app.use(express.static(path.join(__dirname, './client/build')));
+app.use(express.static(path.join(__dirname, '/./client/build')));
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
+  res.sendFile(path.join(__dirname, '/./client/build/index.html'));
 });
