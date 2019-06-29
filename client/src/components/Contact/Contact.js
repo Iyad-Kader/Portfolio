@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
 import axios from 'axios';
+import Typography from '@material-ui/core/Typography';
 
 const styles = {
   form: {
     width: '600px',
-    padding: '2rem',
-    top: '8rem',
-    position: 'relative',
+    padding: '6rem',
+    paddingLeft: '6rem',
     textAlign: 'center',
-    left: '30rem',
     transform: 'scale(1.1)',
-    transformOrigin: '0 0'
+    transformOrigin: '0 0',
+    margin: '0 auto'
   },
   input: {
     width: '300px',
@@ -61,6 +61,7 @@ class Contact extends React.Component {
   render () {
     return (
       <Form onSubmit={this.handleSubmit} style={styles.form}>
+        <Typography>
         <FormGroup>
           <Label for='name'>Name</Label>
           <Input
@@ -96,6 +97,7 @@ class Contact extends React.Component {
         </FormGroup>
 
         <Button>{this.state.buttonText}</Button>
+      </Typography>
       </Form>
     );
   }

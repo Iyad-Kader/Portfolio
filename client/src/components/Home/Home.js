@@ -3,80 +3,81 @@ import React, { Component } from 'react';
 // import Parallax from '../Parallax/Parallax';
 import { Jumbotron, Button } from 'reactstrap';
 import { SocialIcon } from 'react-social-icons';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import { typography } from '@material-ui/system';
+import './style.css'
 
 const images = [
   require('../../assets/profilePic.jpg')
 ];
 
 const styles = {
-  h1: {
-    fontFamily: 'Open Sans',
-    fontSize: '35px',
-    maxWidth: '50%',
-    paddingLeft: '23rem',
-    marginTop: '5rem',
-    paddingBottom: '1rem'
+  img: {
+    width: '300px',
+    float: 'right',
+    marginRight: '2rem',
+    marginBottom: '5rem'
   },
-  h2Drive: {
-    fontFamily: 'Open Sans',
-    fontSize: '35px',
-    maxWidth: '50%',
-    paddingLeft: '23.5rem',
-    paddingTop: '1rem',
-    paddingBottom: '1rem'
+  icons: {
+    float: 'right',
+    position: 'relative',
+    top: '40rem',
+    left: '13em',
+    padding: '1rem',
+    margin: '0.5rem'
   },
   font: {
     fontSize: '25px',
     fontFamily: 'Open Sans',
     fontWeight: 'normal',
-    maxWidth: '50%',
-    paddingLeft: '5rem'
+    marginLeft: '2rem',
+    wordSpacing: '5px'
   },
-  background: {
-    backgroundColor: '#ffffff',
-    paddingBottom: '10rem'
-  },
-  image: {
-    maxWidth: '200px',
-    maxHeight: '400px',
-  },
-  imageDiv: {
+  experienceH1: {
     position: 'relative',
-    left: '67rem',
-    top: '10rem'
+    textAlign: 'center',
+    padding: '1rem'
   },
-  logos: {
+  aboutH1: {
     position: 'relative',
-    top: '15rem',
-    right: '11rem',
-    margin: '1rem'
-  },
-  divImg: {
-    marginTop: '-25rem'
+    textAlign: 'center',
+    padding: '1rem',
+    left: '-4rem'
   }
 };
 
 class Home extends Component {
-  render () {
+  render() {
     return (
-      <div id='jumbotronHome'>
-        <Jumbotron style={styles.background}>
-          <div style={styles.imageDiv}id='profileImgLogo'>
-          <img src={images[0]} alt='' style={styles.image}/>
-            <SocialIcon style={styles.logos}url='https://www.linkedin.com/in/iyad-eddie-kader' target='_blank' />
-            <SocialIcon style={styles.logos} url='https://github.com/Iyad-Kader' target='_blank'/>
-          </div>
-          <div style={styles.divImg}>
-          <h1 id='h1' style={styles.h1}>Experience</h1>
-          <p id='p' style={styles.font}>Web developer with experience in development of full stack applications with experience in <strong>HTML5, CSS3, React, Node, MySQL, and MongoDB.</strong> Certified from the University of California Division of Continued Education.</p>
-          <h1 id='h1' style={styles.h2Drive}>About Me</h1>
-          <p id='p' style={styles.font}>I am a full stack developer based in Irvine, California. I have always had a drive for software development since I was a kid and my cousin introduced me to computer's. I love to learn new thing's and solve difficult problem's. I am seeking to leverage my cogent, technical, and professional communicative skills to learn and grow in the new role as a web developer. </p>
-          </div>
-        </Jumbotron>
-      </div>
+        <div>
+
+          <Typography>
+            <img src={images[0]} alt='' style={styles.img} />
+
+
+            <div>
+            <SocialIcon id='logo' style={styles.icons} url='https://www.linkedin.com/in/iyad-eddie-kader' target='_blank' />
+              <SocialIcon id='logo' style={styles.icons} url='https://github.com/Iyad-Kader' target='_blank' />
+            </div>
+            <div style={styles.font}>
+              <h1 style={styles.experienceH1} id='h1'>Experience</h1>
+              <p id='p'>Web developer with experience in development of full stack applications with experience in <strong>HTML5, CSS3, React, Node, MySQL, and MongoDB.</strong> Certified from the University of California Division of Continued Education.</p>
+              </div>
+              <div style={styles.font}>
+              <h1 style={styles.aboutH1} id='h1'>About Me</h1>
+              <p id='p'>I am a full stack developer based in Irvine, California. I have always had a drive for software development since I was a kid and my cousin introduced me to computer's. I love to learn new thing's and solve difficult problem's. I am seeking to leverage my cogent, technical, and professional communicative skills to learn and grow in the new role as a web developer. </p>
+            
+            </div>
+          </Typography>
+        </div>
+
+
+
     );
   }
 }
 
 export default Home
-;
+  ;

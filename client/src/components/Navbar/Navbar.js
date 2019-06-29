@@ -12,12 +12,11 @@ const styles = {
     textDecoration: 'none'
   },
   position: {
-    position: 'fixed',
+    position: 'relative',
     backgroundColor: '#ffffff',
     width: '100%',
     top: '-1rem',
-    paddingTop: '1rem',
-    padding: '1rem'
+    paddingTop: '1rem'
   }
 };
 

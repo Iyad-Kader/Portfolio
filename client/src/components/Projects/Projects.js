@@ -7,20 +7,20 @@ import { Jumbotron, Button } from 'reactstrap';
 const styles = {
   h1: {
     marginLeft: '5rem',
-    fontSize: '20px',
+    fontSize: '25px',
     fontFamily: 'Open Sans',
     fontWeight: 'normal',
     paddingTop: '5rem'
   },
   h4: {
-    fontSize: '15px',
+    fontSize: '20px',
     fontFamily: 'Open Sans',
     fontWeight: 'normal',
     marginTop: '-0.5rem',
     marginLeft: '6rem'
   },
   font: {
-    fontSize: '17px',
+    fontSize: '22px',
     fontFamily: 'Open Sans',
     fontWeight: 'normal',
     marginLeft: '7rem',
