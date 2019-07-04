@@ -12,7 +12,7 @@ const styles = {
     textDecoration: 'none'
   },
   position: {
-    position: 'relative',
+    position: 'fixed',
     backgroundColor: '#ffffff',
     width: '100%',
     top: '-1rem',

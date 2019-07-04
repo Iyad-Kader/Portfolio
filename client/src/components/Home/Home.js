@@ -15,16 +15,16 @@ const images = [
 
 const styles = {
   img: {
-    width: '300px',
+    width: '250px',
     float: 'right',
     marginRight: '2rem',
-    marginBottom: '5rem'
+    marginBottom: '1rem'
   },
   icons: {
     float: 'right',
     position: 'relative',
-    top: '40rem',
-    left: '13em',
+    top: '32rem',
+    left: '12em',
     padding: '1rem',
     margin: '0.5rem'
   },
@@ -36,15 +36,16 @@ const styles = {
     wordSpacing: '5px'
   },
   experienceH1: {
-    position: 'relative',
-    textAlign: 'center',
-    padding: '1rem'
+    marginTop: '6rem',
+    padding: '1.5rem',
+    textAlign: 'center'
   },
   aboutH1: {
-    position: 'relative',
+    marginTop: '2rem',
+    padding: '1.5rem',
     textAlign: 'center',
-    padding: '1rem',
-    left: '-4rem'
+    position: 'relative',
+    left: '-3.5rem'
   }
 };
 
@@ -63,7 +64,7 @@ class Home extends Component {
             </div>
             <div style={styles.font}>
               <h1 style={styles.experienceH1} id='h1'>Experience</h1>
-              <p id='p'>Web developer with experience in development of full stack applications with experience in <strong>HTML5, CSS3, React, Node, MySQL, and MongoDB.</strong> Certified from the University of California Division of Continued Education.</p>
+              <p id='p'>Web developer with experience in development of full stack applications with experience in <strong>HTML5, CSS3, JavaScript, React, Node, MySQL, and MongoDB.</strong> Certified from the University of California Division of Continued Education.</p>
               </div>
               <div style={styles.font}>
               <h1 style={styles.aboutH1} id='h1'>About Me</h1>
