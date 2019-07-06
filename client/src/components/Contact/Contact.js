@@ -6,12 +6,8 @@ import Typography from '@material-ui/core/Typography';
 const styles = {
   form: {
     width: '600px',
-    padding: '6rem',
-    paddingLeft: '6rem',
-    textAlign: 'center',
-    transform: 'scale(1.1)',
-    transformOrigin: '0 0',
-    margin: '0 auto'
+    paddingBottom: '2rem',
+    margin: 'auto'
   },
   input: {
     width: '300px',

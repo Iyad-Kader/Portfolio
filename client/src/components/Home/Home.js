@@ -20,14 +20,6 @@ const styles = {
     marginRight: '2rem',
     marginBottom: '1rem'
   },
-  icons: {
-    float: 'right',
-    position: 'relative',
-    top: '32rem',
-    left: '12em',
-    padding: '1rem',
-    margin: '0.5rem'
-  },
   font: {
     fontSize: '25px',
     fontFamily: 'Open Sans',
@@ -55,16 +47,10 @@ class Home extends Component {
         <div>
 
           <Typography>
-            <img src={images[0]} alt='' style={styles.img} />
-
-
-            <div>
-            <SocialIcon id='logo' style={styles.icons} url='https://www.linkedin.com/in/iyad-eddie-kader' target='_blank' />
-              <SocialIcon id='logo' style={styles.icons} url='https://github.com/Iyad-Kader' target='_blank' />
-            </div>
+           
             <div style={styles.font}>
               <h1 style={styles.experienceH1} id='h1'>Experience</h1>
-              <p id='p'>Web developer with experience in development of full stack applications with experience in <strong>HTML5, CSS3, JavaScript, React, Node, MySQL, and MongoDB.</strong> Certified from the University of California Division of Continued Education.</p>
+              <p id='p'>Web developer with experience in development of full stack applications with experience in <strong>HTML5, CSS3, JavaScript, React, Node, MySQL, and MongoDB.</strong> </p>
               </div>
               <div style={styles.font}>
               <h1 style={styles.aboutH1} id='h1'>About Me</h1>

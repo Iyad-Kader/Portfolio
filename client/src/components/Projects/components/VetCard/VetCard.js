@@ -11,10 +11,13 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
   card: {
-    maxWidth: 345
+    maxWidth: 550
   },
   media: {
     height: 140
+  },
+  font: {
+    fontSize: '20px'
   }
 };
 
@@ -31,7 +34,7 @@ function VetCard (props) {
           <Typography gutterBottom variant='h5' component='h2'>
             SORIN Vet Clinic
           </Typography>
-          <Typography component='p'>
+          <Typography style={styles.font}component='p'>
             SORIN is used for Veterinary clinics to set appointments, gain information on patient's and doctor's, and to calculate dosage of medicine needed for cat's and dog's based off weight and species. View the deployed version and login with username: <strong>admin</strong>; password: <strong>admin</strong>
           </Typography>
         </CardContent>

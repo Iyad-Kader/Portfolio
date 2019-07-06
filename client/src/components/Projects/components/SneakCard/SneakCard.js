@@ -11,13 +11,17 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
   card: {
-    maxWidth: 345
+    maxWidth: 550,
+    position: 'relative'
   },
   media: {
     height: 140
   },
   btn: {
     marginTop: '2.8rem'
+  },
+  font: {
+    fontSize: '20px'
   }
 };
 
@@ -34,7 +38,7 @@ function SneakCard (props) {
           <Typography gutterBottom variant='h5' component='h2'>
             SneakPeek
           </Typography>
-          <Typography component='p'>
+          <Typography style={styles.font} component='p'>
             An Ecommerce website to buy and pre-order top of the line sneakers. Contains cart checkout with dummy credit card using stripe. Allowing login and account saved data.
           </Typography>
         </CardContent>
